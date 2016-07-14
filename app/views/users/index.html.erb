@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Pokemon Ruby (on Rails)</h1>
+<%@users.each do |user|%>
+<a href='/users/<%=user.id%>'>Continue as <%=user.name%></a>
+<%end%>
+<br>
+<a href="/users/new">New Game</a>
+</body>
+</html>

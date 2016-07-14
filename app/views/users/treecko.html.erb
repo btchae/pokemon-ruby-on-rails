@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>Give it a nickname?</p>
+<%= form_for Pokemon.find(@user.pokemons[0].id), :method => :PUT do |f| %>
+  <%= f.label :nickname, 'Nickname:', class: 'description'%>
+  <%= f.text_field :nickname, :value => @user.pokemons[0].name %>
+  <%= f.submit "Confirm edit" %>
+<% end %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2>Choose your starter!</h2>
+<a href="/users/<%=@user.id%>/treecko"><img src="<%=@treecko['sprites']['front_default']%>"></a>
+<br>
+Name: <%=@treecko["name"]%>
+<br>
+Type(s): <%=@treecko["types"][0]["type"]["name"]%>
+<br>
+<a href="/users/<%=@user.id%>/torchic"><img src="<%=@torchic['sprites']['front_default']%>"></a>
+<br>
+Name: <%=@torchic["name"]%>
+<br>
+Type(s): <%=@torchic["types"][0]["type"]["name"]%>
+<br>
+<a href="/users/<%=@user.id%>/mudkip"><img src="<%=@mudkip['sprites']['front_default']%>"></a>
+<br>
+Name: <%=@mudkip["name"]%>
+<br>
+Type(s): <%=@mudkip["types"][0]["type"]["name"]%>
+</body>
+</html>

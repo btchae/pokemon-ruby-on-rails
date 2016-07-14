@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<%if @user.pokemons.length === 0%>
+  <a href="/users/<%=@user.id%>/start">Start your Pokemon adventure!</a>
+<%else%>
+  <p><%=@user.name%>'s team:</p>
+  <%@user.pokemons.each do |pokemon|%>
+    <a href='/pokemons/<%=pokemon.id%>'><%=pokemon.name%></a>
+  <%end%>
+  <br>
+  <a href='/users/<%=@user.id%>/<%=@user.location%>'>Back to game</a>
+  <br>
+  <a href="/users">Back Save File Selection</a>
+<%end%>
+<br>
+<%= button_to "Delete Save File", user_path(:id => @user.id), :method => :delete %>
+</body>
+</html>

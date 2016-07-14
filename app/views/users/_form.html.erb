@@ -1,0 +1,11 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name, 'Name:', class: 'description'%>
+  <%=f.text_field :name%>
+  <br>
+  <%= radio_button_tag(:sex, "boy") %>
+  <%= label_tag(:sex_boy, "I am a boy") %>
+  <%= radio_button_tag(:sex, "girl") %>
+  <%= label_tag(:sex_girl, "I am a girl") %>
+  <br>
+  <%=f.submit%>
+<%end%>

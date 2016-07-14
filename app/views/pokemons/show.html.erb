@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img src="<%=@pokemon.img_url%>">
+<p>This is <%=@pokemon.nickname%>, and he is a <%=@pokemon.name%>!</p>
+Level: <%=@pokemon.level%>
+<br>
+Pokedex Entry: <%=@pokemon.description%>
+<br>
+Trainer: <a href="/users/<%=@pokemon.user.id%>"><%=@pokemon.user.name%></a>
+<br>
+ <a href='/users/<%=@pokemon.user.id%>/<%=@pokemon.user.location%>'>Back to game</a>
+ <br>
+<%= button_to "Release", pokemon_path(:id => @pokemon.id), :method => :delete %>
+</body>
+</html>
